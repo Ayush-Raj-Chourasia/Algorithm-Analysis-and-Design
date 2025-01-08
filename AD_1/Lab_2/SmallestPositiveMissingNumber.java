@@ -1,32 +1,33 @@
 package AD_1.Lab_2;
 
-import java.util.Scanner;
-import java.util.HashSet;
-
 public class SmallestPositiveMissingNumber {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the size of the array: ");
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
+        int[] arr = {3, 4, -1, 1, 5, 2};
+        int missingNumber = findSmallestMissingNumber(arr);
+        System.out.println("Smallest positive missing number: " + missingNumber);
+    }
 
-        System.out.println("Enter the elements of the array:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();
-        }
+    public static int findSmallestMissingNumber(int[] arr) {
+        int n = arr.length;
 
-        HashSet<Integer> set = new HashSet<>();
-        for (int num : arr) {
-            if (num > 0) {
-                set.add(num);
+     
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j + 1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
 
-        int missing = 1;
-        while (set.contains(missing)) {
-            missing++;
+        int smallestMissing = 1; 
+        for (int num : arr) {
+            if (num == smallestMissing) {
+                smallestMissing++;
+            }
         }
-
-        System.out.println("Smallest positive missing number: " + missing);
+        return smallestMissing;
     }
 }

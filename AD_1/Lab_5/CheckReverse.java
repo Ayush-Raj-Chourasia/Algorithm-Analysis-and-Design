@@ -52,5 +52,6 @@ public class CheckReverse {
         } else {
             System.out.println("Array cannot be sorted by reversing a single subarray.");
         }
+        scanner.close();
     }
 }

@@ -19,5 +19,6 @@ public class RecursiveFibonacci {
         int n = scanner.nextInt();
 
         System.out.println("Fibonacci number: " + fibonacci(n));
+        scanner.close();
     }
 }

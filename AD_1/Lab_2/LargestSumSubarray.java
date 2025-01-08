@@ -26,5 +26,6 @@ public class LargestSumSubarray {
         }
 
         System.out.println("Largest sum of contiguous subarray: " + maxSum);
+        scanner.close();
     }
 }

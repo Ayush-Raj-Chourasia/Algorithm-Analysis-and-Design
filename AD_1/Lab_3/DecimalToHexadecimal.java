@@ -19,5 +19,6 @@ public class DecimalToHexadecimal {
 
         String hex = decimalToHex(num);
         System.out.println("Hexadecimal: " + (hex.isEmpty() ? "0" : hex));
+        scanner.close();
     }
 }

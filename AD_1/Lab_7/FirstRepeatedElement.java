@@ -16,14 +16,14 @@ public class FirstRepeatedElement {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of elements: ");
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
+        // System.out.print("Enter the number of elements: ");
+        // int n = scanner.nextInt();
+        int[] arr = {34,56,77,1,5,6,6,6,7,8,10,34,20,30};
 
-        System.out.println("Enter the elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();
-        }
+        // System.out.println("Enter the elements:");
+        // for (int i = 0; i < arr.length; i++) {
+        //     arr[i] = scanner.nextInt();
+        // }
 
         int result = findFirstRepeated(arr);
         if (result != -1) {
@@ -31,5 +31,6 @@ public class FirstRepeatedElement {
         } else {
             System.out.println("No repeated elements found.");
         }
+        scanner.close();
     }
 }

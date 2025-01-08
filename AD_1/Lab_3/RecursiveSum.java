@@ -22,5 +22,6 @@ public class RecursiveSum {
         }
 
         System.out.println("Sum of numbers: " + sum(arr, n));
+        scanner.close();
     }
 }

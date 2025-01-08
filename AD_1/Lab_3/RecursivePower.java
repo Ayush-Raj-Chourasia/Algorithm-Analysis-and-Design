@@ -18,5 +18,6 @@ public class RecursivePower {
         int exp = scanner.nextInt();
 
         System.out.println(base + " raised to the power " + exp + ": " + power(base, exp));
+        scanner.close();
     }
 }

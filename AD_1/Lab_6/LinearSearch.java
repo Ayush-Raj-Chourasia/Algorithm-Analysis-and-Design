@@ -32,6 +32,7 @@ public class LinearSearch {
         } else {
             System.out.println("Element not found.");
         }
+        scanner.close();
     }
 }
 

@@ -1,31 +1,24 @@
 package AD_1.Lab_7;
 
-import java.util.Scanner;
-
 public class MissingNumber {
-    public static int findMissingNumber(int[] arr, int n) {
-        int totalSum = n * (n + 1) / 2;
-        int arrSum = 0;
-
-        for (int num : arr) {
-            arrSum += num;
+    public static int findMissing(int arr[], int size) {
+        for (int i = 0; i <= size; i++) { // Check numbers from 0 to size
+            boolean found = false;
+            for (int j = 0; j < size; j++) {
+                if (arr[j] == i) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                return i; // Return the first missing number
+            }
         }
-
-        return totalSum - arrSum;
+        return -1; // If no number is missing
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of elements: ");
-        int n = scanner.nextInt();
-        int[] arr = new int[n - 1];
-
-        System.out.println("Enter the elements (1 to " + n + " excluding the missing one):");
-        for (int i = 0; i < n - 1; i++) {
-            arr[i] = scanner.nextInt();
-        }
-
-        int missing = findMissingNumber(arr, n);
-        System.out.println("The missing number is: " + missing);
+        int arr[] = { 6, 8, 40, 2, 3, 5, 12, 0, 1 };
+        System.out.println("The missing number is: " + findMissing(arr, arr.length));
     }
 }

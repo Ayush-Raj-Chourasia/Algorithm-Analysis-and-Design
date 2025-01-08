@@ -32,5 +32,6 @@ public class PrintDuplicates {
         }
 
         printDuplicates(arr);
+        scanner.close();
     }
 }

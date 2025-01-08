@@ -28,5 +28,6 @@ public class BubbleSort {
         for (int num : arr) {
             System.out.print(num + " ");
         }
+        scanner.close();
     }
 }

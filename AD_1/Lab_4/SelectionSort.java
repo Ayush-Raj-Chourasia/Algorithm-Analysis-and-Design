@@ -32,5 +32,6 @@ public class SelectionSort {
         for (int num : arr) {
             System.out.print(num + " ");
         }
+        scanner.close();
     }
 }

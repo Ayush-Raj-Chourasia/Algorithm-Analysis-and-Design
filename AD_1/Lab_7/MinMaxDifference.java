@@ -32,5 +32,6 @@ public class MinMaxDifference {
         }
 
         findMinMaxDifference(arr);
+        scanner.close();
     }
 }

@@ -17,6 +17,7 @@ public class RecursiveGCD {
         int b = scanner.nextInt();
 
         System.out.println("GCD of " + a + " and " + b + ": " + gcd(a, b));
+        scanner.close();
     }
 }
 

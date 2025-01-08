@@ -39,5 +39,6 @@ public class RecursiveBinarySearch {
         } else {
             System.out.println("Element not found.");
         }
+        scanner.close();
     }
 }

@@ -1,14 +1,15 @@
 package AD_1.Lab_3;
 
 import java.util.Scanner;
-import java.util.HashSet;
 
 public class RecursiveSmallestPositiveMissingNumber {
-    public static int findMissing(HashSet<Integer> set, int num) {
-        if (!set.contains(num)) {
-            return num;
+    public static int findMissing(int[] arr, int n, int num) {
+        if (n == 0) return num;
+
+        if (arr[n - 1] == num) {
+            return findMissing(arr, arr.length, num + 1);
         }
-        return findMissing(set, num + 1);
+        return findMissing(arr, n - 1, num);
     }
 
     public static void main(String[] args) {
@@ -22,13 +23,7 @@ public class RecursiveSmallestPositiveMissingNumber {
             arr[i] = scanner.nextInt();
         }
 
-        HashSet<Integer> set = new HashSet<>();
-        for (int num : arr) {
-            if (num > 0) {
-                set.add(num);
-            }
-        }
-
-        System.out.println("Smallest positive missing number: " + findMissing(set, 1));
+        System.out.println("Smallest positive missing number: " + findMissing(arr, n, 1));
+        scanner.close();
     }
 }

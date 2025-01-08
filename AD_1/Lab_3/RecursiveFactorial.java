@@ -16,5 +16,6 @@ public class RecursiveFactorial {
         int n = scanner.nextInt();
 
         System.out.println("Factorial of " + n + ": " + factorial(n));
+        scanner.close();
     }
 }

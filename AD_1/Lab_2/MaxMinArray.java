@@ -1,5 +1,6 @@
 package AD_1.Lab_2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaxMinArray {
@@ -13,6 +14,7 @@ public class MaxMinArray {
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
+        Arrays.sort(arr);
 
         int[] result = new int[n];
         int start = 0, end = n - 1;
@@ -31,5 +33,6 @@ public class MaxMinArray {
         for (int num : result) {
             System.out.print(num + " ");
         }
+        scanner.close();
     }
 }

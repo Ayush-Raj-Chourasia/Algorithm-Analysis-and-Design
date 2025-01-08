@@ -17,5 +17,6 @@ public class SumOfNNumbers {
         }
 
         System.out.println("Sum of numbers: " + sum);
+        scanner.close();
     }
 }
