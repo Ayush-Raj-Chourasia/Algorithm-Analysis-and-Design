@@ -21,8 +21,10 @@ public class StackUsingArray
                 System.out.println("Enter data to push: ");
                 int x=sc.nextInt();
                 S[++top]=x;
+                sc.close();
             }
             return top;
+            
         }
         ///////////////////////////////////////////////////////////////
         public static int pop(int S[],int top){

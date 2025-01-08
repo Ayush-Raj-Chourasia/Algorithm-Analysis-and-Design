@@ -22,5 +22,6 @@ public class RotateArray {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[(i + k) % n] + " ");
         }
+        scanner.close();
     }
 }

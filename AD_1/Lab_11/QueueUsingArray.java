@@ -12,6 +12,7 @@ public class QueueUsingArray {
             System.out.println("Enter data to insert: ");
             int x=sc.nextInt();
             Q[++rear]=x;
+            sc.close();
         }
         if(rear==0) front=0;
     }
